@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>One Piece Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- MODE SELECT (ONLY ONCE) -->
+  <div id="modeSelect">
+    <div class="mode-box width ">
+      <h1>🏴‍☠️ One Piece Quiz</h1>
+      <p>Select Mode</p>
+
+      <button onclick="startGame('normal')">Normal</button>
+      <button onclick="startGame('hardcore')">Hardcore 😈</button>
+    </div>
+  </div>
+
+  <!-- QUIZ -->
+  <div class="quiz-box">
+    <div id="levelMessage" class="level-message">
+      <h2 id="levelText"></h2>
+    </div>
+
+    <h1>🏴‍☠️ One Piece Quiz</h1>
+    <img id="charImage" src="" width="200">
+    <p id="timer">⏱️ Time: 10</p>
+    <p id="progress">Question 1 / 15</p>
+    <h2 id="question">Question here</h2>
+
+    <div id="options">
+      <button class="option" onclick="checkAnswer(0)"></button>
+      <button class="option" onclick="checkAnswer(1)"></button>
+      <button class="option" onclick="checkAnswer(2)"></button>
+      <button class="option" onclick="checkAnswer(3)"></button>
+    </div>
+
+    <p id="lives">❤️❤️❤️</p>
+    <button id="soundToggle" onclick="toggleSound()">🔊</button>
+
+    <p id="score">Score: 0</p>
+    <button id="next" onclick="nextQuestion()">Next</button>
+  </div>
+
+  <!-- END SCREEN -->
+  <div id="endScreen" class="end-screen" style="display:none;">
+    <h1>🏴‍☠️ Quiz Complete!</h1>
+    <p id="finalScore"></p>
+    <p id="rank"></p>
+    <button onclick="restartQuiz()">Play Again</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
